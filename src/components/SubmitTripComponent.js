@@ -3,6 +3,8 @@ import ReactStars from 'react-stars';
 import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, FormFeedback } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+// need new handleRating method--changing star rating crashes page because handleInputChange cannot handle it
+
 class SubmitTrip extends Component {
     constructor(props) {
         super(props);
@@ -43,7 +45,7 @@ class SubmitTrip extends Component {
                             <h2>Share your Trip Report</h2>
                             <hr />
                         </div>
-                        <div className="col-md-10">
+                        <div className="col-md-10 offset-md-1">
                             <Form onSubmit={this.handleSubmit}>
                                 <FormGroup row>
                                     <Label htmlFor="name" md={2}>Name</Label>
@@ -76,7 +78,7 @@ class SubmitTrip extends Component {
                                         </Input>
                                     </Col>
                                 </FormGroup>
-                                <FormGroup>
+                                <FormGroup row>
                                     <Label htmlFor="visitDate" md={2}>Visit Date</Label>
                                     <Col md={10}>
                                         <Input
@@ -89,7 +91,7 @@ class SubmitTrip extends Component {
                                         />
                                     </Col>
                                 </FormGroup>
-                                <FormGroup>
+                                <FormGroup row>
                                     <Label htmlFor="rating" md={2}>Rating</Label>
                                     <Col md={10}>
                                         <ReactStars
@@ -103,7 +105,7 @@ class SubmitTrip extends Component {
                                         />
                                     </Col>
                                 </FormGroup>
-                                <FormGroup>
+                                <FormGroup row>
                                     <Label htmlFor="tripText" md={2}>Trip Report</Label>
                                     <Col md={10}>
                                         <Input

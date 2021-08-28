@@ -1,10 +1,9 @@
 import React from 'react';
+import SubmitTrip from './SubmitTripComponent'
 
 function TripReports() {
     return(
-        <div>
-            TRIP REPORTS: Welcome to the Calapooia River
-        </div>
+        <SubmitTrip />
     );
 }
 
