@@ -1,9 +1,14 @@
 import React from 'react';
+import MapContainer from './MapContainerComponent';
 
 function River() {
     return(
-        <div>
-            The River: Welcome to the Calapooia River
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <MapContainer />
+                </div>
+            </div>
         </div>
     );
 }

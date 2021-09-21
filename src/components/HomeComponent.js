@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero from './Hero'
+import HeroVid from './HeroVidComponent'
 
 function Home() {
     return(
-        <Hero/>
+        <HeroVid/>
     );
 }
 
