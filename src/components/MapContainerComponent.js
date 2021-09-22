@@ -4,12 +4,10 @@ import {Map, GoogleApiWrapper} from 'google-maps-react';
 class MapContainer extends Component {
     render() {
         return (
-            <div className="mapContainer" >
                 <Map
                     google={this.props.google}
                     className={"map"}
                 />
-            </div>
         )
     }
 };
