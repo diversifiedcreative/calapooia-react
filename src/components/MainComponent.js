@@ -3,7 +3,6 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import River from './RiverComponent';
-import MapContainer from './MapContainerComponent'
 import Resources from './ResourcesComponent';
 import TripReports from './TripReportsComponent';
 import Guides from './GuidesComponent';
