@@ -4,6 +4,7 @@ const mapContainerStyles = {
     height: 'calc(100vh - 56px)',
     width: '100%'
 }
+
 function IframeMap () {
     return(
         <div style={mapContainerStyles}>
@@ -11,5 +12,7 @@ function IframeMap () {
         </div>
     )
 }
+
+//add a toast indicating that the sidebar may be opened for better map controls
 
 export default IframeMap;
