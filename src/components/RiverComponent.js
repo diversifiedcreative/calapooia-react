@@ -1,9 +1,9 @@
 import React from 'react';
-import MapContainer from './MapContainerComponent';
+import IframeMap from './IframeMap';
 
 function River() {
     return(
-                    <MapContainer />
+        <IframeMap />
     );
 }
 

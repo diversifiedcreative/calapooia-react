@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import './Header.css';
 
 class Header extends Component {
 

@@ -1,14 +1,17 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+// import { Button } from 'reactstrap';
 import './HeroVid.css';
 
 function HeroVid() {
     return (
         <div className='hero-container'>
-            <video src="https://media.giphy.com/media/d6KYCCIOAdsWL4aNm4/giphy.mp4" autoPlay loop muted />
-            <h2>Made with soul for comfort and coziness in your home</h2>
-            <p>We sell tableware for your home</p>
-            <div className="hero-btns">
+            <video src="/assets/vid/heroVid.mp4" autoPlay loop muted type="video/mp4"/>
+            <div className='hero-text'>
+                <h3>Welcome to </h3>
+                <h1>The Calapooia River</h1>
+                <p>A hidden gem in Oregon's Linn County</p>
+            </div>
+            {/* <div className="hero-btns">
                 <Button 
                 className='btns' 
                 buttonStyle='btn--outline'
@@ -24,7 +27,7 @@ function HeroVid() {
                     Watch Video <i className='far 
                     fa-play-circle'/>
                 </Button>
-            </div>
+            </div> */}
         </div>
     )
 }
