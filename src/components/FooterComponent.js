@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
+import logo from '../img/dc-logo-sm.png';
 
 function Footer(props) {
     return(
@@ -19,7 +20,7 @@ function Footer(props) {
                     </div>
                     <div className="col text-center foot-col">
                         <p>Created as a public service by:</p>
-                        <a href="http://diversifiedcreative.com/" target="_blank" rel="noreferrer"><img src="/assets/img/dc-logo-sm.png" alt="Diversified Creative logo" height="50px" /></a>
+                        <a href="http://diversifiedcreative.com/" target="_blank" rel="noreferrer"><img src={logo} alt="Diversified Creative logo" height="50px" /></a>
                         <hr style={{ borderTop: '3px solid white' }} /> 
                         <p>&copy; 2021 Diversified Creative</p>
                     </div>

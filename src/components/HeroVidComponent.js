@@ -1,11 +1,12 @@
 import React from 'react';
 // import { Button } from 'reactstrap';
 import './HeroVid.css';
+import hero from '../vid/heroVid.mp4';
 
 function HeroVid() {
     return (
         <div className='hero-container'>
-            <video src="/assets/vid/heroVid.mp4" autoPlay loop muted type="video/mp4"/>
+            <video src={hero} autoPlay loop muted type="video/mp4"/>
             <div className='hero-text'>
                 <h3>Welcome to </h3>
                 <h1>The Calapooia River</h1>

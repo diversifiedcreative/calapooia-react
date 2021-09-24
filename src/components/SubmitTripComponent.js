@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactStars from 'react-stars';
-import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, FormFeedback } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Form, FormGroup, Label, Input, Col } from 'reactstrap';
 
 // need new handleRating method--changing star rating crashes page because handleInputChange cannot handle it
 
