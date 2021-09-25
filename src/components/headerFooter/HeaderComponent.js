@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import './header.css';
 
 class Header extends Component {
 
@@ -34,13 +35,13 @@ class Header extends Component {
                                 <NavLink className="nav-link" to="/river">The River</NavLink>
                             </NavItem>
                             <NavItem>
+                                <NavLink className="nav-link" to="/exploreMap">Explore Map</NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink className="nav-link" to="/resources">Resources</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/tripReports">Trip Reports</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/guides">Guides</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import ReactStars from 'react-stars';
-import { Form, FormGroup, Label, Input, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Col, Row } from 'reactstrap';
 
-// need new handleRating method--changing star rating crashes page because handleInputChange cannot handle it
+// should be a link or modal on page that shows trip reports. Submit should redirect back to trip reports.
+
+// Needs work on responsiveness at narrow sizes: radio buttons break.
 
 class SubmitTrip extends Component {
     constructor(props) {
@@ -11,22 +12,29 @@ class SubmitTrip extends Component {
             name: '',
             visitType: '',
             visitDate: '',
-            rating: '',
+            recommend: '',
             tripText: ''
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleRadioChange = this.handleRadioChange.bind(this);
     }
 
     handleInputChange(event) {
         const target = event.target;
         const name = target.name;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const value = target.value;
 
         this.setState({
             [name]: value
         })
+    }
+
+    handleRadioChange(event) {
+        this.setState({
+            recommend: event.target.value
+        });
     }
 
     handleSubmit(event) {
@@ -40,11 +48,11 @@ class SubmitTrip extends Component {
             <>
                 <div className="container">
                     <div className="row row-content">
-                        <div className="col-12">
+                        <div className="col-10 offset-md-1 pt-3">
                             <h2>Share your Trip Report</h2>
                             <hr />
                         </div>
-                        <div className="col-md-10 offset-md-1">
+                        <div className="col-md-10 offset-md-1 pb-3">
                             <Form onSubmit={this.handleSubmit}>
                                 <FormGroup row>
                                     <Label htmlFor="name" md={2}>Name</Label>
@@ -70,6 +78,7 @@ class SubmitTrip extends Component {
                                             placeholder="please select"
                                             onChange={this.handleInputChange}
                                         >
+                                            <option value="" disabled selected>Select your option</option>
                                             <option value="singleLoc">Single Location</option>
                                             <option value="roundtripWater">Roundtrip Waterway Navigation</option>
                                             <option value="onewayWater">Oneway Waterway Navigation</option>
@@ -91,17 +100,47 @@ class SubmitTrip extends Component {
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                    <Label htmlFor="rating" md={2}>Rating</Label>
-                                    <Col md={10}>
-                                        <ReactStars
-                                            id="rating"
-                                            value={this.state.rating}
-                                            count={5}
-                                            size={24}
-                                            color1={'A9A9A9'}
-                                            color2={'E00000'}
-                                            onChange={this.handleInputChange}
-                                        />
+                                    <Label htmlFor="rating" md={2}>Would you recommend your visit to others?</Label>
+                                    <Col md={{size: 9, offset: 1}}>
+                                        <Row>
+                                            <Label>
+                                                <Input
+                                                    id="recommend"
+                                                    value="Yes"
+                                                    type="radio"
+                                                    name="recommend"
+                                                    checked={this.state.recommend === "Yes"}
+                                                    onChange={this.handleRadioChange}
+                                                />
+                                                Yes, I recommend my visit experience.
+                                            </Label>
+                                        </Row>
+                                        <Row>
+                                            <Label>
+                                                <Input
+                                                    id="recommend"
+                                                    value="Neutral"
+                                                    type="radio"
+                                                    name="recommend"
+                                                    checked={this.state.recommend === "Neutral"}
+                                                    onChange={this.handleRadioChange}
+                                                />
+                                                My visit experience was neutral.
+                                            </Label>
+                                        </Row>
+                                        <Row>
+                                            <Label>
+                                                <Input
+                                                    id="recommend"
+                                                    value="No"
+                                                    type="radio"
+                                                    name="recommend"
+                                                    checked={this.state.recommend === "No"}
+                                                    onChange={this.handleRadioChange}
+                                                />
+                                                I do not recommend my visit to others.
+                                            </Label>
+                                        </Row>
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row>
@@ -118,6 +157,13 @@ class SubmitTrip extends Component {
                                         />
                                     </Col>
                                 </FormGroup>
+                                <FormGroup row>
+                                <Col md={{size: 10, offset: 2}}>
+                                    <Button type="submit" color="dark">
+                                        Submit Trip Report
+                                    </Button>
+                                </Col>
+                            </FormGroup>
                             </Form>
                         </div>
                     </div>

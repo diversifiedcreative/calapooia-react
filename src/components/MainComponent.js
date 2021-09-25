@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
-import Header from './HeaderComponent';
-import Footer from './FooterComponent';
+import Header from './headerFooter/HeaderComponent';
+import Footer from './headerFooter/FooterComponent';
 import Home from './HomeComponent';
 import River from './RiverComponent';
+import Explore from './ExploreMapComponent'
 import Resources from './ResourcesComponent';
 import TripReports from './TripReportsComponent';
-import Guides from './GuidesComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import './main.css';
 
 class Main extends Component {
 
     render() {
         return(
-            <div>
+            <>
                 <Header />
-                <Switch>
-                    <Route path='/home' component={Home} />
-                    <Route path='/river' component={River} />
-                    <Route path='/resources' component={Resources} />
-                    <Route path='/tripReports' component={TripReports} />
-                    <Route path='/guides' component={Guides} />
-                    <Redirect to='/home' />
-                </Switch>
-                <Footer />
-            </div>
+                <div className="content-container">
+                    <Switch>
+                        <Route path='/home' component={Home} />
+                        <Route path='/river' component={River} />
+                        <Route path='/exploreMap' component={Explore} />
+                        <Route path='/resources' component={Resources} />
+                        <Route path='/tripReports' component={TripReports} />
+                        <Redirect to='/home' />
+                    </Switch>
+                </div>
+                <div className="footer-container">
+                    <Footer />
+                </div>
+            </>
         );
     }
 }

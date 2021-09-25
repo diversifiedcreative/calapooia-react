@@ -10,7 +10,7 @@ const mapContainerStyles = {
 
 toast.configure();
 
-const toastMessage = <div>Click <img src={sidebarGoogMapIcon} alt="sidebar logo"/> icon above to open map navigation tools.</div>
+const toastMessage = <div style={{textAlign: "center"}}>Click <img src={sidebarGoogMapIcon} alt="sidebar logo"/> icon above to open map navigation tools.</div>
 
 const mapToast = () => {
     toast(toastMessage, {
@@ -24,7 +24,7 @@ const mapToast = () => {
     });
 };
 
-function IframeMap () {
+function Explore () {
 
     useEffect(() => {
         mapToast();
@@ -32,11 +32,11 @@ function IframeMap () {
 
     return(
         <div style={mapContainerStyles}>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1YYanY-SRGh1d46XEZcPJA_wU_P9tgbX9&hl=en" width="100%" height="100%" title="The Calapooia River" />
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1YYanY-SRGh1d46XEZcPJA_wU_P9tgbX9" width="100%" height="100%" title="The Calapooia River" />
         </div>
     )
 }
 
 //add a toast indicating that the sidebar may be opened for better map controls
 
-export default IframeMap;
+export default Explore;
