@@ -1,9 +1,11 @@
 import React from 'react';
+import { Container, Row, Col, Card, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 const routes = [
     {
         id: 0,
         name: 'National Forest to end of pavement',
+        sourceType: 'published',
         source: 'American Whitewater',
         class: '2-4',
         url: 'https://www.americanwhitewater.org/content/River/detail/id/3038/'
@@ -11,6 +13,7 @@ const routes = [
     {
         id: 1,
         name: 'End of pavement to McClun Wayside',
+        sourceType: 'published',
         source: 'American Whitewater',
         class: '2-3',
         url: 'https://www.americanwhitewater.org/content/River/detail/id/1490/'
@@ -18,6 +21,7 @@ const routes = [
     {
         id: 2,
         name: 'McClun Wayside to McKercher Park',
+        sourceType: 'published',
         source: 'American Whitewater',
         class: '2',
         url: 'https://www.americanwhitewater.org/content/River/detail/id/1491/'
@@ -25,18 +29,32 @@ const routes = [
     {
         id: 3,
         name: 'McKercher Park to Brownsville',
+        sourceType: 'published',
         source: 'American Whitewater',
         class: '1',
         url: 'https://www.americanwhitewater.org/content/River/detail/id/3039/'
+    },
+    {
+        id: 4,
+        name: 'Queen Avenue to Willamette River',
+        sourceType: 'user-submitted',
+        source: 'Diversifed Creative',
+        class: '1',
+        url: '/userRoute1'
     }
+
 ];
 
 function RenderRoute ({route}) {
     if(route) {
         return(
-            <div>
-                <a href={route.url}>{route.name}</a> is a class {route.classRating} route described on {route.source}.
-            </div>
+                <Card>
+                    <CardBody>
+                        <CardTitle>{route.name}</CardTitle>
+                        <CardSubtitle><strong>Class: </strong>{route.class} | <strong>Source: </strong>{route.source} ({route.sourceType})</CardSubtitle>
+                        <a href={route.url} target="none"><Button>Click to view route</Button></a>
+                    </CardBody>
+                </Card>
         );
     }
     return <div />;
@@ -45,9 +63,13 @@ function RenderRoute ({route}) {
 
 const routesList = routes.map(route => {
     return (
-        <div key={route.id}>
-            <RenderRoute route={route}/>
-        </div>
+        <Container key={route.id}>
+            <Row tag="li">
+                <Col>
+                    <RenderRoute route={route}/>
+                </Col>
+            </Row>
+        </Container>
     )
 })
 
