@@ -10,6 +10,7 @@ class SubmitTrip extends Component {
         super(props);
         this.state = {
             name: '',
+            location: '',
             visitType: '',
             visitDate: '',
             recommend: '',
@@ -63,6 +64,19 @@ class SubmitTrip extends Component {
                                             type="text"
                                             name="name"
                                             placeholder="Name"
+                                            onChange={this.handleInputChange}
+                                        />
+                                    </Col>
+                                </FormGroup>
+                                <FormGroup row>
+                                    <Label htmlFor="location" md={2}>Location</Label>
+                                    <Col md={10}>
+                                        <Input
+                                            id="location"
+                                            value={this.state.location}
+                                            type="text"
+                                            name="location"
+                                            placeholder="Where did you visit?"
                                             onChange={this.handleInputChange}
                                         />
                                     </Col>

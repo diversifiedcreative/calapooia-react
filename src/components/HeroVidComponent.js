@@ -18,7 +18,7 @@ function HeroVid() {
                         <h1 className='hero-text'>The Calapooia River</h1>
                     </Fade>
                     <Fade in>
-                        <p className='hero-text'>A hidden gem in Oregon's Linn County</p>
+                        <p className='hero-text'>A gem of Oregon's Linn County</p>
                     </Fade>
                 </Stagger>
                 </div>

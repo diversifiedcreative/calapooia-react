@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import './customToastify.css';
-import sidebarGoogMapIcon from '../img/sidebarGoogMapIcon.png';
 
 const mapContainerStyles = {
     height: 'calc(100vh - 56px)',
@@ -10,7 +9,7 @@ const mapContainerStyles = {
 
 toast.configure();
 
-const toastMessage = <div style={{textAlign: "center"}}>Click <img src={sidebarGoogMapIcon} alt="sidebar logo"/> icon above to open map navigation tools.</div>
+const toastMessage = <div style={{textAlign: "center"}}>Click <img src="img/sidebarGoogMapIcon.png" alt="sidebar logo"/> icon above to open map navigation tools.</div>
 
 const mapToast = () => {
     toast(toastMessage, {

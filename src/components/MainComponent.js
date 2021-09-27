@@ -7,6 +7,7 @@ import Explore from './ExploreMapComponent'
 import Resources from './ResourcesComponent';
 import TripReports from './TripReportsComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 import './main.css';
 
 class Main extends Component {
@@ -16,14 +17,17 @@ class Main extends Component {
             <>
                 <Header />
                 <div className="content-container">
-                    <Switch>
-                        <Route path='/home' component={Home} />
-                        <Route path='/river' component={River} />
-                        <Route path='/exploreMap' component={Explore} />
-                        <Route path='/resources' component={Resources} />
-                        <Route path='/tripReports' component={TripReports} />
-                        <Redirect to='/home' />
-                    </Switch>
+                    <ScrollToTop>
+                        {/* need to debug ScrollToTop.js for useEffect dependency issue  */}
+                        <Switch>
+                            <Route path='/home' component={Home} />
+                            <Route path='/river' component={River} />
+                            <Route path='/exploreMap' component={Explore} />
+                            <Route path='/resources' component={Resources} />
+                            <Route path='/tripReports' component={TripReports} />
+                            <Redirect to='/home' />
+                        </Switch>
+                    </ScrollToTop>
                 </div>
                 <div className="footer-container">
                     <Footer />
