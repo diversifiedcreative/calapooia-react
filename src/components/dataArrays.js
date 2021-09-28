@@ -59,15 +59,15 @@ export const recSites = [
     {
         id: 2,
         name: 'Queens Bend',
-        location: 'Queen Avenue at wester city limits of Albany',
+        location: 'Queen Avenue at west edge of Albany',
         type: 'swimming hole',
         description: 'A well-known and well-used location by locals for swimming, sunbathing, floating, and hanging out.'
     },
     {
         id: 3,
         name: 'Willamette Confluence',
-        location: '',
-        type: 'swimming hole, boating',
+        location: 'Albany, next to Bryant Park',
+        type: 'swimming hole',
         description: 'Accessible from Bryant Park on the west and Montieth Riverfront park on the east, this is the most utilized recreation location on the calapooia river, popular for swimming and paddling.'
     },
 ];
