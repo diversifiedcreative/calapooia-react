@@ -1,90 +1,122 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
-
-const routes = [
-    {
-        id: 0,
-        name: 'National Forest to end of pavement',
-        sourceType: 'published',
-        source: 'American Whitewater',
-        class: '2-4',
-        url: 'https://www.americanwhitewater.org/content/River/detail/id/3038/'
-    },
-    {
-        id: 1,
-        name: 'End of pavement to McClun Wayside',
-        sourceType: 'published',
-        source: 'American Whitewater',
-        class: '2-3',
-        url: 'https://www.americanwhitewater.org/content/River/detail/id/1490/'
-    },
-    {
-        id: 2,
-        name: 'McClun Wayside to McKercher Park',
-        sourceType: 'published',
-        source: 'American Whitewater',
-        class: '2',
-        url: 'https://www.americanwhitewater.org/content/River/detail/id/1491/'
-    },
-    {
-        id: 3,
-        name: 'McKercher Park to Brownsville',
-        sourceType: 'published',
-        source: 'American Whitewater',
-        class: '1',
-        url: 'https://www.americanwhitewater.org/content/River/detail/id/3039/'
-    },
-    {
-        id: 4,
-        name: 'Queen Avenue to Willamette River',
-        sourceType: 'user-submitted',
-        source: 'Diversifed Creative',
-        class: '1',
-        url: '/userRoute1'
-    }
-
-];
-
-function RenderRoute ({route}) {
-    if(route) {
-        return(
-                <Card>
-                    <CardBody>
-                        <CardTitle>{route.name}</CardTitle>
-                        <CardSubtitle><strong>Class: </strong>{route.class} | <strong>Source: </strong>{route.source} ({route.sourceType})</CardSubtitle>
-                        <a href={route.url} target="none"><Button>Click to view route</Button></a>
-                    </CardBody>
-                </Card>
-        );
-    }
-    return <div />;
-}
-
+import { Container, Row, Col, Button } from 'reactstrap';
+import { FullImg, SectionHead } from './DisplayModules';
+import { routes, recSites } from './dataArrays'
+import './resources.css';
 
 const routesList = routes.map(route => {
     return (
-        <Container key={route.id}>
+        <>
+            <Container key={route.id}>
+                <Row tag="li">
+                    <Col>
+                        <RenderRoute route={route}/>
+                    </Col>
+                </Row>
+            </Container>
+        </>
+    )
+})
+
+const recSitesList = recSites.map(recSite => {
+    return (
+        <Container key={recSite.id}>
             <Row tag="li">
                 <Col>
-                    <RenderRoute route={route}/>
+                    <RenderRecSite recSite={recSite}/>
                 </Col>
             </Row>
         </Container>
     )
 })
 
+function RenderRoute ({route}) {
+    if(route) {
+        return(
+            <div className="render-cont container">
+                <div className="render-row row">
+                    <div className="render-left col-sm-8">
+                        <div className="render-head">{route.name}</div>
+                        <div className="render-sub"><strong>Class: </strong>{route.class} | <strong>Location: </strong>{route.source} ({route.sourceType})</div>
+                    </div>
+                    <div className="render-right col-sm-4">
+                        <a href={route.url} target="none"><Button>Click to view route</Button></a> 
+                    </div>
+                </div>
+            </div>
+        );
+    }
+    return <div />;
+}
 
+function Routes() {
+    return (
+        <>
+            <div className="section-cont">
+                <SectionHead heading="River Routes" />
+                <div className="row">
+                    {routesList}
+                </div>
+            </div>
+        </>
+    );
+}
+
+function RenderRecSite ({recSite}) {
+    if(recSite) {
+        return(
+            <div className="render-cont container">
+                <div className="render-row row">
+                    <div className="render-left col-sm-4">
+                        <div className="render-head">{recSite.name}</div>
+                        <div className="render-sub"><strong>Type: </strong>{recSite.type} | <strong>Location: </strong>{recSite.location}</div>
+                    </div>
+                    <div className="render-right col-sm-7 offset-sm-1">
+                        {recSite.description}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+    return <div />;
+}
+
+function RecSites() {
+    return (
+        <>
+            <div className="section-cont">
+                <SectionHead heading="Recreation Sites" />
+                <div className="row">
+                    {recSitesList}
+                </div>
+            </div>
+        </>
+    );
+}
 
 function Resources() {
     return(
-        <div>
-            <h2>RESOURCES: Welcome to the Calapooia River</h2>
-            <h3>River Navigation Routes</h3>
-            <div className="row">
-                {routesList}
+        <>
+            <div className="section-cont">
+                <SectionHead heading="Calapooia River Resources" />
+                <div className="section">
+                    <p>This page provides a variety of resources to aid in the public enjoyment of the Calapooia River. These materials are still under construction. Additions under development include: </p>
+                    <ul>
+                        <li>External Links to relevant other websites</li>
+                        <li>Linkage between locations of 'River Routes' and 'Recreation Sites' and the Explore Map of this website</li>
+                        <li>Detailed pictures for all locations which will aid users in finding put-in/take-out locations</li>
+                    </ul>
+                </div>
             </div>
-
-        </div>
+            <Routes />
+            <RecSites />
+            <div className="section-cont">
+                <FullImg source="img/cala-bend.jpg" 
+                    caption="Oregon's beautiful Calapooia River"
+                    credit="2021 Diversified Creative"
+                />
+            </div>
+        </>
     );
 }
 

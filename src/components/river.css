@@ -13,7 +13,7 @@
 .fullImgCont {
     text-align: center;
     justify-content: center;
-    margin: 2% 0;
+    margin: 2% -3%;
     background-color: rgba(0,128,128,.2);
     box-shadow: 0 0 5px 7px rgba(0,128,128,.2);
 }

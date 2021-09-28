@@ -1,13 +1,11 @@
 import React from 'react';
-// import { Button } from 'reactstrap';
 import './HeroVid.css';
-import hero from '../vid/heroVid.mp4';
 import { Fade, Stagger } from 'react-animation-components';
 
 function HeroVid() {
     return (
         <div className='hero-container'>
-            <video src={hero} autoPlay loop muted type="video/mp4"/>
+            <video src='vid/heroVid.mp4' autoPlay loop muted type="video/mp4"/>
             <div className='hero-text-container'>
                 <div className='hero-text-background'>
                 <Stagger in delay={500} duration={1000}>
@@ -24,7 +22,7 @@ function HeroVid() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default HeroVid;
