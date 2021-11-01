@@ -37,7 +37,7 @@ function RenderRoute ({route}) {
                 <div className="render-row row">
                     <div className="render-left col-sm-8">
                         <div className="render-head">{route.name}</div>
-                        <div className="render-sub"><strong>Class: </strong>{route.class} | <strong>Location: </strong>{route.source} ({route.sourceType})</div>
+                        <div className="render-sub"><strong>Class: </strong>{route.class} | <strong>Source: </strong>{route.source} ({route.sourceType})</div>
                     </div>
                     <div className="render-right col-sm-4">
                         <a href={route.url} target="none"><Button>Click to view route</Button></a> 

@@ -40,8 +40,9 @@ class SubmitTrip extends Component {
 
     handleSubmit(event) {
         console.log("Current state is:" + JSON.stringify(this.state));
-        alert("Current state is:" + JSON.stringify(this.state));
+        this.props.postTripReport(this.state.userName, this.state.location, this.state.visitType, this.state.visitDate, this.state.recommend, this.state.tripText);
         event.preventDefault();
+        this.props.closeModal();
     }
 
     render() {
