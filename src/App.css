@@ -1,8 +1,8 @@
-.section > p > a {
-  color: black;
-  text-decoration: underline;
+.section>p>a {
+    color: black;
+    text-decoration: underline;
 }
 
-.section > p > a:hover {
-  color: grey;
+.section>p>a:hover {
+    color: grey;
 }

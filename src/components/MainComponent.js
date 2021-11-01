@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './headerFooter/HeaderComponent';
 import Footer from './headerFooter/FooterComponent';
 import Home from './HomeComponent';
@@ -10,31 +10,28 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import './main.css';
 
-class Main extends Component {
-
-    render() {
-        return(
-            <>
-                <Header />
-                <div className="content-container">
-                    <ScrollToTop>
-                        {/* need to debug ScrollToTop.js for useEffect dependency issue  */}
-                        <Switch>
-                            <Route path='/home' component={Home} />
-                            <Route path='/river' component={River} />
-                            <Route path='/exploreMap' component={Explore} />
-                            <Route path='/resources' component={Resources} />
-                            <Route path='/tripReports' component={TripReports} />
-                            <Redirect to='/home' />
-                        </Switch>
-                    </ScrollToTop>
-                </div>
-                <div className="footer-container">
-                    <Footer />
-                </div>
-            </>
-        );
-    }
+function Main() {
+    return(
+        <>
+            <Header />
+            <div className="content-container">
+                <ScrollToTop>
+                    {/* need to debug ScrollToTop.js for useEffect dependency issue  */}
+                    <Switch>
+                        <Route path='/home' component={Home} />
+                        <Route path='/river' component={River} />
+                        <Route path='/exploreMap' component={Explore} />
+                        <Route path='/resources' component={Resources} />
+                        <Route path='/tripReports' component={TripReports} />
+                        <Redirect to='/home' />
+                    </Switch>
+                </ScrollToTop>
+            </div>
+            <div className="footer-container">
+                <Footer />
+            </div>
+        </>
+    );
 }
 
 export default Main;

@@ -9,7 +9,7 @@ class SubmitTrip extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
+            userName: '',
             location: '',
             visitType: '',
             visitDate: '',
@@ -56,14 +56,14 @@ class SubmitTrip extends Component {
                         <div className="col-md-10 offset-md-1 pb-3">
                             <Form onSubmit={this.handleSubmit}>
                                 <FormGroup row>
-                                    <Label htmlFor="name" md={2}>Name</Label>
+                                    <Label htmlFor="name" md={2}>Your Name</Label>
                                     <Col md={10}>
                                         <Input
-                                            id="name"
+                                            id="userName"
                                             value={this.state.name}
                                             type="text"
-                                            name="name"
-                                            placeholder="Name"
+                                            name="userName"
+                                            placeholder="Enter name to display with your report"
                                             onChange={this.handleInputChange}
                                         />
                                     </Col>
