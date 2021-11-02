@@ -57,11 +57,11 @@ class SubmitTrip extends Component {
                         <div className="col-md-10 offset-md-1 pb-3">
                             <Form onSubmit={this.handleSubmit}>
                                 <FormGroup row>
-                                    <Label htmlFor="name" md={2}>Your Name</Label>
+                                    <Label htmlFor="userName" md={2}>Your Name</Label>
                                     <Col md={10}>
                                         <Input
                                             id="userName"
-                                            value={this.state.name}
+                                            value={this.state.userName}
                                             type="text"
                                             name="userName"
                                             placeholder="Enter name to display with your report"
