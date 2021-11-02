@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'reactstrap';
+
 import axios from 'axios';
 import { baseUrl } from '../config';
 
@@ -38,18 +40,20 @@ function FetchTrips() {
 			.catch((err) => {
 				console.log(err);
 			});
-	});
+	}, []);
 
 	return (
-		<div>
-			<ul>
-				{tripReports.map((tripReport) => (
-					<li key={tripReport.id}>
-                        <RenderTripReport tripReport={tripReport} />
-                    </li>
-				))}
-			</ul>
-		</div>
+		<>
+			{tripReports.map((tripReport) => (
+                <Container key={tripReport.id}>
+                    <Row tag="li">
+                        <Col>
+                            <RenderTripReport tripReport={tripReport} />
+                        </Col>
+                    </Row>
+                </Container>
+            ))}
+        </>
 	);
 }
 
