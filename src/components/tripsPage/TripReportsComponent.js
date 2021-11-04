@@ -29,7 +29,7 @@ function TripReports() {
 
 			</div>
 			<div className="section-cont">
-				<FullImg source={baseUrl + 'img/cala-willamette.jpg'} caption="Bryant Park and the mouthe of the Calapooia from the Highway 20 bridge over the Willamette at Albany." credit="2021 Diversified Creative" />
+				<FullImg source={baseUrl + 'img/cala-willamette.jpg'} caption="Bryant Park and the mouth of the Calapooia from the Highway 20 bridge over the Willamette at Albany." credit="2021 Diversified Creative" />
 			</div>
 			<Modal open={open} onClose={onCloseModal} center>
 				<SubmitTrip closeModal={onCloseModal} postTripReport={postTripReport} />
