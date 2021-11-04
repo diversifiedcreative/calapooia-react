@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Header from './headerFooter/HeaderComponent';
 import Footer from './headerFooter/FooterComponent';
-import Home from './HomeComponent';
-import River from './RiverComponent';
-import Explore from './ExploreMapComponent';
-import Resources from './ResourcesComponent';
-import TripReports from './TripReportsComponent';
+import Home from './homePage/HomeComponent';
+import River from './riverPage/RiverComponent';
+import Explore from './mapPage/ExploreMapComponent';
+import Resources from './resourcesPage/ResourcesComponent';
+import TripReports from './tripsPage/TripReportsComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './toolComponents/ScrollToTop';
 import './main.css';
 
 class Main extends Component {
