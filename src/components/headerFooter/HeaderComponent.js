@@ -9,7 +9,7 @@ function Header() {
     return(
         <Navbar dark className="bg-dark dark" sticky="top" expand="md">
             <div className="container">
-                <NavbarBrand className="mr-auto" href="/"><img src='cala-favicon.png' alt='calapooia logo' />The Calapooia River</NavbarBrand>
+                <NavbarBrand className="mr-auto" href="/"><img src='cala-favicon.png' alt='calapooia logo' className="navbar-logo" />The Calapooia River</NavbarBrand>
                 <NavbarToggler onClick={() => toggleNav(!isNavOpen)} />
                 <Collapse isOpen={isNavOpen} navbar>
                     <Nav navbar className="ml-auto">

@@ -4,7 +4,7 @@ import { baseUrl } from 'config';
 import './customToastify.css';
 
 const mapContainerStyles = {
-    height: 'calc(100vh - 56px)',
+    height: 'calc(100vh - 106px)',
     width: '100%',
 }
 
