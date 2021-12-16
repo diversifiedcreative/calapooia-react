@@ -3,9 +3,13 @@
 }
 
 a {
-    color: #fff;
+    color: #fff8;
     text-decoration: none;
     /* font-size: 10rem; */
+}
+
+a.active {
+    color: #fff;
 }
 
 a:hover {

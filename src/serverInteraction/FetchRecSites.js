@@ -40,7 +40,7 @@ function FetchRecSites() {
 	return (
 		<>
 			{recSites.map((recSite) => (
-				<Container key={recSite.id}>
+				<Container key={recSite._id}>
 					<Row tag="li">
 						<Col>
 							<RenderRecSite recSite={recSite} />

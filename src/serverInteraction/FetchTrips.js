@@ -47,7 +47,7 @@ function FetchTrips() {
 	return (
 		<>
 			{tripReports.map((tripReport) => (
-				<Container key={tripReport.id}>
+				<Container key={tripReport._id}>
 					<Row tag="li">
 						<Col>
 							<RenderTripReport tripReport={tripReport} />

@@ -3,10 +3,17 @@
     --footer-height: 178px;
 }
 
-.content-container {
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+main {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
-.footer-container {
+footer {
     position: relative;
 }
