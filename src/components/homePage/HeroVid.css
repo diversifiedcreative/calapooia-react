@@ -21,8 +21,8 @@ video {
 
 .hero-text-background {
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, .6);
-    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .6);
+    background-color: var(--hero-bg-color);
+    box-shadow: 0 0 20px 20px var(--hero-bg-color);
     animation-name: backdrop;
     animation-duration: 4s;
 }
@@ -34,8 +34,8 @@ video {
     }
 
     to {
-        background-color: rgba(0, 0, 0, .6);
-        box-shadow: 0 0 20px 20px rgba(0, 0, 0, .6);
+        background-color: var(--hero-bg-color);
+        box-shadow: 0 0 20px 20px var(--hero-bg-color);
     }
 }
 

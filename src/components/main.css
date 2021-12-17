@@ -1,13 +1,29 @@
 :root {
-    --header-height: 106px;
-    --footer-height: 178px;
+    --header-height: 110px;
+    --footer-height: 160px;
+
+    --head-foot-grad-color-1: #09222b;
+    --head-foot-grad-color-2: #092f35;
+    --page-bg-color: #fefdf9;
+    --hero-bg-color: #09222b90;
+    --img-bg-color: #8fe8;
+    --img-border-color: #6ee4;
+
+
+    --action-btn-color: #f05028b0;
+    --action-btn-border: #da8a78;
+    --action-btn-text: #fffef4;
 }
 
+body {
+    background-color: var(--page-bg-color);
+}
 header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
+    opacity: 97%;
 }
 
 main {
@@ -16,4 +32,5 @@ main {
 
 footer {
     position: relative;
+    opacity: 97%;
 }

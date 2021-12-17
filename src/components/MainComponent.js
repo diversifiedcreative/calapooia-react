@@ -1,11 +1,12 @@
 import React, { useLayoutEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Header, Footer } from './headFoot/HeadFootComponent';
-import Home from './homePage/HomeComponent';
-import River from './riverPage/RiverComponent';
-import Explore from './mapPage/ExploreMapComponent';
-import Resources from './resourcesPage/ResourcesComponent';
-import TripReports from './tripsPage/TripReportsComponent';
+import Home from './homePage/HomePage';
+import River from './riverPage/RiverPage';
+import Explore from './mapPage/ExploreMapPage';
+import Resources from './resourcesPage/ResourcesPage';
+import TripReports from './tripsPage/TripReportsPage';
+import './toolComponents/displayModules.css'
 import './main.css';
 
 function Main() {

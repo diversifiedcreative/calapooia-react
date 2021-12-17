@@ -8,7 +8,7 @@ export function Header() {
 	const [isNavOpen, toggleNav] = useState(false);
 
 	return (
-		<Navbar dark className="bg-dark dark header-nav" expand="md">
+		<Navbar dark className="head-foot" expand="md">
 			<NavbarBrand className="col-sm-3 col-lg-4" href="/">
 				<img src="cala-favicon.png" alt="calapooia logo" className="navbar-logo" />
 				<span className="d-none d-lg-inline">The Calapooia River</span>
@@ -38,8 +38,9 @@ export function Header() {
 }
 
 export function Footer() {
+    let year = new Date().getFullYear();
 	return (
-		<div className="container-fluid bg-dark text-light footer-content">
+		<div className="container-fluid head-foot">
 			<div className="row">
 				<div className="d-none d-sm-inline align-items-center col-sm-3 foot-col">
 					<img src="cala-favicon.png" alt="calapooia logo" className="foot-logo" />
@@ -69,7 +70,7 @@ export function Footer() {
 						<img src={baseUrl + 'img/dc-logo-sm.png'} alt="Diversified Creative logo" height="50px" />
 					</a>
 					<hr style={{ borderTop: '3px solid white', margin: '6px 0 6px' }} />
-					<p>&copy; 2021 Diversified Creative</p>
+					<p>&copy; {year} Diversified Creative</p>
 				</div>
 			</div>
 		</div>

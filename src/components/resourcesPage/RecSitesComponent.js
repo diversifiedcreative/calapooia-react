@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { SectionHead } from '../toolComponents/DisplayModules';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
-import FetchRecSites from '../../serverInteraction/FetchRecSites';
-import SubmitRecSite from './SubmitRecSiteComponent';
+import { FetchRecSites } from '../../serverInteraction/fetch';
+import { SubmitRecSite } from '../toolComponents/Forms';
 import { postUserRecSite } from '../../serverInteraction/post';
 
 function RecSites() {

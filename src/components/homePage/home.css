@@ -1,6 +1,6 @@
 .home-content {
-    background-color: rgba(255,255,255,.8);
-    backdrop-filter: blur(50px);
+    background-color: #fefdf9d0;
+    backdrop-filter: blur(15px);
     border-radius: 15px;
     padding: 5% 10%;
     margin: 0 5% 30px;
@@ -8,21 +8,50 @@
 }
 
 .head-card {
-    background-color: rgba(0,128,128,.4);
+    background-color: #8fec;
+    border: 5px solid #6ed8;
+    box-shadow: 0 0 60px 0 #6ee8;
+    backdrop-filter: blur(15px);
     align-items: center;
+    border-radius: 5px;
     height: 35vh;
     max-height: 400px;
-    /* backdrop-filter: blur(50px); */
-    box-shadow: 0 0 10px 15px rgba(0,128,128,.4);
     margin: 10px 0 35px;
 }
 
-.head-img-box {
+.card-img-cont {
     height: 100%;
+    padding: 0;
 }
 
-.head-img {
+.card-text>h6 {
+    font-size: 1.5rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: justify;
+}
+
+.card-text>span {
+    font-size: 1.1rem;
+    padding-left: 4vw;
+    font-style: italic;
+}
+
+.card-img {
     height: 100%;
-    max-height: 100%; 
+    /* max-height: 100%;  */
     object-fit: cover;
+}
+
+.home-text {
+    font-size: 1.25rem;
+    text-align: justify;
+    width: 85%;
+    margin: 0 auto 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .home-text {
+        width: 100%;
+    }
 }

@@ -23,8 +23,8 @@ function Resources() {
 				</div>
 			</div>
 
-			<Routes />
 			<RecSites />
+			<Routes />
 
 			<div className="section-cont">
 				<FullImg source={baseUrl + 'img/cala-bend.jpg'} caption="Oregon's beautiful Calapooia River" credit="2021 Diversified Creative" />

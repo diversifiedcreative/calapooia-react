@@ -1,0 +1,69 @@
+/* FullImg */
+
+.fullImgCont {
+    background-color: var(--img-bg-color);
+    border: 5px solid var(--img-border-color);
+    box-shadow: 0 0 60px 0 var(--img-border-color);
+    text-align: center;
+    justify-content: center;
+    margin: 2% -3%;
+    border-radius: 5px;
+}
+
+.fullImgImg {
+    width: 100%;
+}
+
+.fullImgText {
+    margin: 0 2%;
+}
+
+.fullImgCap {
+    text-align: center;
+    font-size: .75rem;
+    font-style: italic;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.fullImgCred {
+    text-align: right;
+    font-size: .5rem;
+}
+
+
+/* SectionHead */
+
+.section-head>h4 {
+    padding-top: 10px;
+    padding-left: 5%;
+}
+
+
+/* Render*Components */
+
+.render-cont {
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 5px 5%;
+}
+
+.render-row {
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.render-head {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.render-left {
+    align-self: flex-start;
+}
+
+.render-right {
+    align-self: flex-end;
+}

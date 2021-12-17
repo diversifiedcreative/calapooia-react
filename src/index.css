@@ -1,3 +1,32 @@
+@font-face {
+    font-family: 'LatoLt';
+    src:
+        local('Lato-Light'),
+        url(./fonts/Lato-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LatoReg';
+    src:
+        local('Lato-Regular'),
+        url(./fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LatoLtItl';
+    src:
+        local('Lato-LightItalic'),
+        url(./fonts/Lato-LightItalic.ttf) format('truetype');
+}
+
+body {
+    font-family: 'LatoReg';
+}
+
+h1, h2, h3, h4 {
+    font-family: 'LatoReg';
+}
+
 .section>p>a {
     color: black;
     text-decoration: underline;

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { SectionHead } from '../toolComponents/DisplayModules';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
-import FetchRoutes from '../../serverInteraction/FetchRoutes';
-import SubmitRoute from './SubmitRouteComponent';
+import { FetchRoutes } from '../../serverInteraction/fetch';
+import { SubmitRoute } from '../toolComponents/Forms';
 import { postUserRoute } from '../../serverInteraction/post';
 
 function Routes() {

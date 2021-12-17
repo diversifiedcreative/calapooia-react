@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { FullImg, SectionHead } from '../toolComponents/DisplayModules';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
-import SubmitTrip from './SubmitTripComponent';
+import { SubmitTrip } from '../toolComponents/Forms';
 import { postTripReport } from '../../serverInteraction/post';
-import FetchTrips from '../../serverInteraction/FetchTrips';
+import { FetchTrips } from '../../serverInteraction/fetch';
 import { baseUrl } from 'config';
 
 function TripReports() {
