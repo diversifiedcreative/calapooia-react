@@ -3,7 +3,6 @@ import { FullImg, SectionHead } from '../toolComponents/DisplayModules';
 import RecSites from './RecSitesComponent';
 import Routes from './RoutesComponent';
 import { baseUrl } from 'config';
-import './resources.css';
 
 function Resources() {
 	return (

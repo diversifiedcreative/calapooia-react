@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SectionHead } from '../toolComponents/DisplayModules';
+import { SectionHead, FetchHead } from '../toolComponents/DisplayModules';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { FetchRecSites } from '../../serverInteraction/fetch';
@@ -16,15 +16,11 @@ function RecSites() {
 			<div className="section-cont">
 				<SectionHead heading="Calapooia Recreation Sites" />
 				<div className="section">
-					<div className="row">
-						<div className="col-sm-8">
-							This page provides public access to user-submitted trip reports. Click the button to the right to submit your own report for the
-							benefit and use of other visitors of this website.
-						</div>
-						<div className="col-sm-4" display="inline">
-							<button onClick={onOpenModal}>Propose a Rec Site</button>
-						</div>
-					</div>
+                <FetchHead
+						text="This page provides a moderated database of recreation sites along the Calapooia. Please submit your site proposal with as much detail as possible. Note that user-submitted sites are not automatically posted, but are reviewed, edited, and curated for clarity, to prevent duplicative entries, and to ensure safety/legality of access."
+						btnText="Propose a Rec Site"
+						onClick={onOpenModal}
+					/>
 					<FetchRecSites />
 				</div>
 			</div>

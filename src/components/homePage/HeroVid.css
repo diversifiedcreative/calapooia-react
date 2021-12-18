@@ -3,11 +3,12 @@ video {
     width: 100%;
     height: 100%;
     position: fixed;
+    top: var(--header-height);
     z-index: -1;
 }
 
 .hero-container {
-    height: calc(100vh - 56px);
+    height: calc(100vh - var(--header-height));
     width: 100%;
     display: flex;
     flex-direction: column;

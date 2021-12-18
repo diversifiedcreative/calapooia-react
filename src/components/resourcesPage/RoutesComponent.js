@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SectionHead } from '../toolComponents/DisplayModules';
+import { SectionHead, FetchHead } from '../toolComponents/DisplayModules';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { FetchRoutes } from '../../serverInteraction/fetch';
@@ -16,16 +16,11 @@ function Routes() {
 			<div className="section-cont">
 				<SectionHead heading="Calapooia River-Run Routes" />
 				<div className="section">
-					<div className="row">
-						<div className="col-sm-8">
-							This page provides public access to user-submitted trip reports. Click the button to the right to submit your own report for the
-							benefit and use of other visitors of this website.
-						</div>
-						<div className="col-sm-4" display="inline">
-							<button onClick={onOpenModal}>Propose a River Route</button>
-						</div>
-					</div>
-
+					<FetchHead
+						text="This page provides a moderated database of runnable routes on the Calapooia. Please submit your proposed route with as much detail as possible. Please note that user-submitted routes are not automatically posted, but will be reviewed and edited for clarity and to prevent duplicative entries."
+						btnText="Propose a River Route"
+						onClick={onOpenModal}
+					/>
 					<FetchRoutes />
 				</div>
 			</div>

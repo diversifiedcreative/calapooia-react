@@ -34,3 +34,40 @@ footer {
     position: relative;
     opacity: 97%;
 }
+
+.section-cont {
+    margin: 15px 5%;
+}
+
+.section {
+    padding: 2%;
+    max-width: 850px;
+    margin: 10px auto 10px auto;
+    text-align: justify;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1079px) {
+    .section-cont {
+        margin: 15px 10%
+    }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1600px) {
+    .section-cont {
+        margin: 15px 13%
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    .section-cont {
+        margin: 15px 15%
+    }
+}
+
+button {
+    background-color: var(--action-btn-color);
+    color: var(--action-btn-text);
+    border: var(--action-btn-border);
+    border-radius: 5px;
+    padding: 15px 25px;
+}
