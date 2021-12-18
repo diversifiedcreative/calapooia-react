@@ -16,8 +16,8 @@ function TripReports() {
 	return (
 		<>
 			<div className="section-cont">
-				<SectionHead heading="User Trip Reports" />
 				<div className="section">
+					<SectionHead heading="User Trip Reports" />
 					<FetchHead
 						text="This page provides public access to user-submitted trip reports. Click the button to the right to submit your own report for the benefit and use of other visitors of this website."
 						btnText="Submit Your Trip"

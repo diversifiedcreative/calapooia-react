@@ -19,17 +19,13 @@ export function FetchRecSites() {
 	}, []);
 
 	return (
-		<>
+		<div className="fetch-cont">
 			{recSites.map((recSite) => (
-				<div className="fetch-cont" key={recSite._id}>
-					<div className="fetch-row" tag="li">
-						<div className="fetch-col">
-							<RenderRecSite recSite={recSite} />
-						</div>
-					</div>
+				<div className="render-cont" key={recSite._id}>
+					<RenderRecSite recSite={recSite} />
 				</div>
 			))}
-		</>
+		</div>
 	);
 }
 
@@ -49,17 +45,13 @@ export function FetchRoutes() {
 	}, []);
 
 	return (
-		<>
+		<div className="fetch-cont">
 			{routes.map((route) => (
-				<div className="fetch-cont" key={route._id}>
-					<div className="fetch-row" tag="li">
-						<div className="fetch-col">
-							<RenderRoute route={route} />
-						</div>
-					</div>
+				<div className="render-cont" key={route._id}>
+					<RenderRoute route={route} />
 				</div>
 			))}
-		</>
+		</div>
 	);
 }
 
@@ -79,16 +71,12 @@ export function FetchTrips() {
 	}, []);
 
 	return (
-		<>
+		<div className="fetch-cont">
 			{tripReports.map((tripReport) => (
-				<div className="fetch-cont" key={tripReport._id}>
-					<div className="fetch-row" tag="li">
-						<div className="fetch-col">
-							<RenderTripReport tripReport={tripReport} />
-						</div>
-					</div>
+				<div className="render-cont" key={tripReport._id}>
+					<RenderTripReport tripReport={tripReport} />
 				</div>
 			))}
-		</>
+		</div>
 	);
 }

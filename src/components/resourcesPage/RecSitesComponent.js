@@ -14,9 +14,9 @@ function RecSites() {
 	return (
 		<>
 			<div className="section-cont">
-				<SectionHead heading="Calapooia Recreation Sites" />
 				<div className="section">
-                <FetchHead
+					<SectionHead heading="Calapooia Recreation Sites" />
+					<FetchHead
 						text="This page provides a moderated database of recreation sites along the Calapooia. Please submit your site proposal with as much detail as possible. Note that user-submitted sites are not automatically posted, but are reviewed, edited, and curated for clarity, to prevent duplicative entries, and to ensure safety/legality of access."
 						btnText="Propose a Rec Site"
 						onClick={onOpenModal}

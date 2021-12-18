@@ -8,8 +8,8 @@ function Resources() {
 	return (
 		<>
 			<div className="section-cont">
-				<SectionHead heading="Calapooia River Resources" />
 				<div className="section">
+					<SectionHead heading="Calapooia River Resources" />
 					<p>
 						This page provides a variety of resources to aid in the public enjoyment of the Calapooia River. These materials are still under
 						construction. Additions under development include:{' '}

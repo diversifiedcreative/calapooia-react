@@ -20,50 +20,86 @@
 
 .fullImgCap {
     text-align: center;
-    font-size: .75rem;
-    font-style: italic;
-    font-weight: 600;
+    font-size: .8rem;
+    /* font-style: italic; */
     padding-top: 10px;
 }
 
 .fullImgCred {
     text-align: right;
-    font-size: .5rem;
+    font-size: .625rem;
 }
 
 
 /* SectionHead */
 
+.section-head {
+    margin-top: 10px;
+}
+
 .section-head>h4 {
     padding-top: 10px;
     padding-left: 5%;
+    font-size: 1.6rem;
 }
 
 
-/* Fetch*, Render* Modules */
+/* Fetch* Modules */
+
+.fetch-head {
+    padding: 10px 0 20px;
+}
+
+/*Render* Modules */
 
 .render-cont {
-    border: 1px solid pink;
+    /* border: 3px solid grey; */
+    border-radius: 5px;
     padding: 5px 5px;
+    margin: 2px;
 }
 
 .render-row {
     padding: 15px 5%;
     display: flex;
-    align-items: center;
-    vertical-align: middle;
+    border-top: 1px solid #bbac;
+    background-color: #dca2;
 }
 
 .render-head {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 5px;
+    margin: 3px auto 5px 10%;
+    font-size: 1.4rem;
 }
 
 .render-left {
-    align-self: flex-start;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* align-self: flex-start; */
 }
 
-.render-right {
-    align-self: flex-end;
+.render-sub {
+    padding-bottom: 5px;
+}
+
+.render-desc {
+    text-align: justify;
+    padding-bottom: 5px;
+}
+
+
+.render-btn-col {
+    text-align: center;
+    margin: auto 0 auto 0;
+}
+
+.render-route-link-btn {
+    background-color: #3768;
+}
+
+.render-no-route-link {
+    padding: 0 3% 0 3%;
+    color: #376c;
+    text-align: right;
 }

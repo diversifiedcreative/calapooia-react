@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "font-awesome/css/font-awesome.css";
 import { FullImg, SectionHead } from "../toolComponents/DisplayModules";
 import { baseUrl } from 'config';
 
@@ -21,6 +20,7 @@ function History() {
 						prominently in the 1986 Rob Reiner film <em>Stand By Me</em>.
 					</p>
 				</div>
+                <FullImg source={baseUrl + 'img/cala-down-willamette.jpg'} caption="Looking down the Willamette River from it's confluence with the Calapooia at Albany." credit="2021 Diversified Creative" />
 			</div>
 		</>
 	);

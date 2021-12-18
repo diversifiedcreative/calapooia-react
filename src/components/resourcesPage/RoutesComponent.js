@@ -14,8 +14,8 @@ function Routes() {
 	return (
 		<>
 			<div className="section-cont">
-				<SectionHead heading="Calapooia River-Run Routes" />
 				<div className="section">
+					<SectionHead heading="Calapooia River-Run Routes" />
 					<FetchHead
 						text="This page provides a moderated database of runnable routes on the Calapooia. Please submit your proposed route with as much detail as possible. Please note that user-submitted routes are not automatically posted, but will be reviewed and edited for clarity and to prevent duplicative entries."
 						btnText="Propose a River Route"
