@@ -3,7 +3,7 @@
 .head-foot {
     text-align: center;
     background-color: var(--head-foot-grad-color-1);
-    background: linear-gradient(90deg, var(--head-foot-grad-color-1), var(--head-foot-grad-color-2), var(--head-foot-grad-color-1));
+    /* background: linear-gradient(90deg, var(--head-foot-grad-color-1), var(--head-foot-grad-color-2), var(--head-foot-grad-color-1)); */
     color: #fff8;
     padding: 10px 0 10px 0;
 }
