@@ -286,7 +286,7 @@ export class SubmitTrip extends Component {
 	}
 
 	handleSubmit(event) {
-		alert('Current state is:' + JSON.stringify(this.state));
+		// alert('Current state is:' + JSON.stringify(this.state));
 		console.log('Current state is:' + JSON.stringify(this.state));
 		this.props.postTripReport(
 			this.state.userName,

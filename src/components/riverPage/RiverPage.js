@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FullImg, SectionHead } from "../toolComponents/DisplayModules";
-import { baseUrl } from 'config';
+import calaDownWillamette from 'img/cala-down-willamette.jpg';
+import calaHead from 'img/cala-head.jpg';
+import calaSwissCheese from 'img/cala-swiss-cheese.jpg';
+import calaRailBridge from 'img/cala-rail-bridge.jpg';
+import calaQueen from 'img/cala-queen.jpg';
+import calaMouth from 'img/cala-mouth.jpg';
 
 function History() {
 	return (
@@ -20,7 +25,7 @@ function History() {
 						prominently in the 1986 Rob Reiner film <em>Stand By Me</em>.
 					</p>
 				</div>
-                <FullImg source={baseUrl + 'img/cala-down-willamette.jpg'} caption="Looking down the Willamette River from it's confluence with the Calapooia at Albany." credit="2021 Diversified Creative" />
+                <FullImg source={calaDownWillamette} caption="Looking down the Willamette River from it's confluence with the Calapooia at Albany." credit="2021 Diversified Creative" />
 			</div>
 		</>
 	);
@@ -30,7 +35,7 @@ function Geography() {
 	return (
 		<>
 			<div className="section-cont">
-				<FullImg source={baseUrl + 'img/cala-head.jpg'} caption="A view down the uppermost reaches of the Calapooia basin from above the headwaters. Taken on road NF520 below Tidbits Mountain" credit="2021 Diversified Creative" />
+				<FullImg source={calaHead} caption="A view down the uppermost reaches of the Calapooia basin from above the headwaters. Taken on road NF520 below Tidbits Mountain" credit="2021 Diversified Creative" />
 				<div className="section">
 					<SectionHead heading="Geography" />
 					<p>
@@ -45,14 +50,14 @@ function Geography() {
 						</strong>
 					</p>
 				</div>
-				<FullImg source={baseUrl + 'img/cala-swiss-cheese.jpg'} caption="A beautiful swimming hole between the small town of Holley and the lower Weyerhaeuser gate." credit="2021 Diversified Creative" />
+				<FullImg source={calaSwissCheese} caption="A beautiful swimming hole between the small town of Holley and the lower Weyerhaeuser gate." credit="2021 Diversified Creative" />
 				<div className="section">
 					<p>
 						Between the lower Weyerhaeuser gate and the small town of Holley, the Calapooia boasts many lovely recreation opportunities in the form of swimming holes and stretches of river which are seasonally runnable for kayakers. See the <Link to="/resources">resources page</Link> for some specific recreation opportunities.
 					</p>
 					<p>Roughly one-third of the way through the Calapooia's 81-mile course, the river leaves the the narrow valleys of it's birth and empties out into the flatter, open agricultural terrain of the Willamette Valley at the town of Holley. From Holley onward, the river primarily winds through and between farm and ranch properties in the narrow earthen gorge it has carved through the ancient flood plains of the Willamette Basin.</p>
 				</div>
-				<FullImg source={baseUrl + 'img/cala-rail-bridge.jpg'} caption="A family cools off in the Calapooia under a rail bridge between the small towns of Shedd and Tangent." credit="2021 Diversified Creative" />
+				<FullImg source={calaRailBridge} caption="A family cools off in the Calapooia under a rail bridge between the small towns of Shedd and Tangent." credit="2021 Diversified Creative" />
 				<div className="section">
 					<p>Roughly one-third of the way through the Calapooia's 81-mile course, the river leaves the the narrow valleys of it's birth and empties out into the flatter, open agricultural terrain of the Willamette Valley at the town of Holley. From Holley onward, the river primarily winds through and between farm and ranch properties in the narrow earthen gorge it has carved through the ancient flood plains of the Willamette Basin.</p>
 					<p>
@@ -60,7 +65,7 @@ function Geography() {
 						frequently referred to as "the grass seed capitol of the world," passing by the small towns of Halsey, Shedd, and Tangent
 					</p>
 				</div>
-				<FullImg source={baseUrl + 'img/cala-queen.jpg'} caption="Looking south along the Calapooia near the western city limits of Albany. The bridge visible is Queen Avenue, and the gravel bar visible under and past the bridge is a popular swimming hole." credit="2021 Diversified Creative" />
+				<FullImg source={calaQueen} caption="Looking south along the Calapooia near the western city limits of Albany. The bridge visible is Queen Avenue, and the gravel bar visible under and past the bridge is a popular swimming hole." credit="2021 Diversified Creative" />
 				<div className="section">
 					<p>
 						The final stretch of the Calapooia river takes it past the town of Albany, Oregon, the only town of any significant size within 20 miles of any part of this remote and reclusive waterway. The river peaks into public view as it passes under Queen Avenue at Albany's western city limits, where there is a popular swimming hole and an opportunity for intrepid floaters/kayakers to put in when the flow is appropriate. The river slinks away back into private, hidden passages
@@ -71,7 +76,7 @@ function Geography() {
 						Bryant Park. This stretch of the river is popular for swimming and paddling, and is one of the few spots on the river's entire course that sees substantial and regular public recreation.
 					</p>
 				</div>
-				<FullImg source={baseUrl + 'img/cala-mouth.jpg'} caption="Looking into the mouth of Calapooia from the confluence with the Willamette River at Albany." credit="2021 Diversified Creative" />
+				<FullImg source={calaMouth} caption="Looking into the mouth of Calapooia from the confluence with the Willamette River at Albany." credit="2021 Diversified Creative" />
 			</div>
 		</>
 	);

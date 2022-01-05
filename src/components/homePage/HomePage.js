@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroVid from './HeroVidComponent';
-import { baseUrl } from 'config';
+import calaRiver from 'img/cala-river.jpg';
 import './home.css';
 
 function HomeContent() {
@@ -8,7 +8,7 @@ function HomeContent() {
 		<div className="home-content">
 			<div className="head-card row">
 				<div className="d-none d-md-block col-md-5 card-img-cont">
-					<img className="card-img" src={baseUrl + 'img/cala-river.jpg'} alt="calapooia river" />
+					<img className="card-img" src={calaRiver} alt="calapooia river" />
 				</div>
 				<div className="card-text col col-md-7">
 					<h6>To put your hands in a river is to feel the chords that bind the earth together.</h6>

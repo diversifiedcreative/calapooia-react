@@ -1,12 +1,12 @@
 import React from 'react';
 import './HeroVid.css';
 import { Fade, Stagger } from 'react-animation-components';
-import { baseUrl } from 'config';
+import heroVid from 'vid/heroVid.mp4';
 
 function HeroVid() {
     return (
         <div className='hero-container'>
-            <video src={baseUrl + 'vid/heroVid.mp4'} autoPlay loop muted type="video/mp4"/>
+            <video src={heroVid} autoPlay loop muted type="video/mp4"/>
             <div className='hero-text-container'>
                 <div className='hero-text-background'>
                 <Stagger in delay={500} duration={1000}>

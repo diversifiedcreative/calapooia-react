@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { baseUrl } from 'config';
+import dcLogoSm from 'img/dc-logo-sm.png';
 import './headFoot.css';
 
 export function Header() {
@@ -67,7 +67,7 @@ export function Footer() {
 				<div className="col-8 col-sm-6 text-center foot-col">
 					<p>Created as a public service by:</p>
 					<a href="http://diversifiedcreative.com/" target="_blank" rel="noreferrer">
-						<img src={baseUrl + 'img/dc-logo-sm.png'} alt="Diversified Creative logo" height="50px" />
+						<img src={dcLogoSm} alt="Diversified Creative logo" height="50px" />
 					</a>
 					<hr style={{ borderTop: '3px solid white', margin: '6px 0 6px' }} />
 					<p>&copy; {year} Diversified Creative</p>

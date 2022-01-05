@@ -5,7 +5,7 @@ import 'react-responsive-modal/styles.css';
 import { SubmitTrip } from '../toolComponents/Forms';
 import { postTripReport } from '../../serverInteraction/post';
 import { FetchTrips } from '../../serverInteraction/fetch';
-import { baseUrl } from 'config';
+import calaWillamette from 'img/cala-willamette.jpg';
 
 function TripReports() {
 	const [open, setOpen] = useState(false);
@@ -27,7 +27,7 @@ function TripReports() {
 				</div>
 
 				<FullImg
-					source={baseUrl + 'img/cala-willamette.jpg'}
+					source={calaWillamette}
 					caption="Bryant Park and the mouth of the Calapooia from the Highway 20 bridge over the Willamette at Albany."
 					credit="2021 Diversified Creative"
 				/>

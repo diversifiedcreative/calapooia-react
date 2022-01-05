@@ -2,7 +2,7 @@ import React from 'react';
 import { FullImg, SectionHead } from '../toolComponents/DisplayModules';
 import RecSites from './RecSitesComponent';
 import Routes from './RoutesComponent';
-import { baseUrl } from 'config';
+import calaBend from 'img/cala-bend.jpg';
 
 function Resources() {
 	return (
@@ -26,7 +26,7 @@ function Resources() {
 			<Routes />
 
 			<div className="section-cont">
-				<FullImg source={baseUrl + 'img/cala-bend.jpg'} caption="Oregon's beautiful Calapooia River" credit="2021 Diversified Creative" />
+				<FullImg source={calaBend} caption="Oregon's beautiful Calapooia River" credit="2021 Diversified Creative" />
 			</div>
 		</>
 	);
